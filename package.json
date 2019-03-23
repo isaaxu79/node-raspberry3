@@ -9,6 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@adonisjs/websocket-client": "^1.0.9",
+    "babel-polyfill": "^6.26.0",
     "socket.io": "^2.2.0"
   }
 }

@@ -3,8 +3,18 @@ var io = require('socket.io')(app);
 var fs = require('fs');
 const exec = require('child_process').exec
 
+
+
+
 app.listen(8081);
-cronMotor();
+
+var WebSocket = require('ws');
+var ws = new WebSocket('ws://localhost:3333');
+    ws.on('ready', () => {
+      chat.emit('message', 'hello Server')
+    })
+        
+//cronMotor();
 function handler (req, res) {
   fs.readFile(__dirname + '/index.html',
   function (err, data) {
